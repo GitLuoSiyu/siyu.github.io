@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第 1 题：写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？ | 程序员思语</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="程序员思语个人博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.a0ec715f.css" as="style"><link rel="preload" href="/assets/js/app.b1dab1dc.js" as="script"><link rel="preload" href="/assets/js/26.e05b3b04.js" as="script"><link rel="preload" href="/assets/js/2.b82dbfb5.js" as="script"><link rel="preload" href="/assets/js/21.c2bfae59.js" as="script"><link rel="preload" href="/assets/js/3.60189cc8.js" as="script"><link rel="preload" href="/assets/js/8.e6a50b92.js" as="script"><link rel="prefetch" href="/assets/js/10.00ed7cfc.js"><link rel="prefetch" href="/assets/js/100.5a5b9109.js"><link rel="prefetch" href="/assets/js/101.d34b6944.js"><link rel="prefetch" href="/assets/js/102.aa1bbee4.js"><link rel="prefetch" href="/assets/js/103.35550b4f.js"><link rel="prefetch" href="/assets/js/104.7cf9ea3a.js"><link rel="prefetch" href="/assets/js/105.47868818.js"><link rel="prefetch" href="/assets/js/106.4cb7a78f.js"><link rel="prefetch" href="/assets/js/107.76f8e5ff.js"><link rel="prefetch" href="/assets/js/108.d33bf974.js"><link rel="prefetch" href="/assets/js/109.aca99d04.js"><link rel="prefetch" href="/assets/js/11.c681868a.js"><link rel="prefetch" href="/assets/js/12.09e85e3d.js"><link rel="prefetch" href="/assets/js/13.367fd8d3.js"><link rel="prefetch" href="/assets/js/14.2a41c61e.js"><link rel="prefetch" href="/assets/js/15.143c46e4.js"><link rel="prefetch" href="/assets/js/16.323cd87e.js"><link rel="prefetch" href="/assets/js/17.fcfe3814.js"><link rel="prefetch" href="/assets/js/18.9ec6c992.js"><link rel="prefetch" href="/assets/js/19.8afc661e.js"><link rel="prefetch" href="/assets/js/20.3fe8a03f.js"><link rel="prefetch" href="/assets/js/22.7dd4d348.js"><link rel="prefetch" href="/assets/js/23.0cec52f4.js"><link rel="prefetch" href="/assets/js/24.e14aa36f.js"><link rel="prefetch" href="/assets/js/25.9bbab5c3.js"><link rel="prefetch" href="/assets/js/27.b960af16.js"><link rel="prefetch" href="/assets/js/28.17eca43c.js"><link rel="prefetch" href="/assets/js/29.06d61d57.js"><link rel="prefetch" href="/assets/js/30.aab8a44f.js"><link rel="prefetch" href="/assets/js/31.0030f042.js"><link rel="prefetch" href="/assets/js/32.aecc28ef.js"><link rel="prefetch" href="/assets/js/33.b8f8e3ac.js"><link rel="prefetch" href="/assets/js/34.79e9f377.js"><link rel="prefetch" href="/assets/js/35.f37f593d.js"><link rel="prefetch" href="/assets/js/36.bf649370.js"><link rel="prefetch" href="/assets/js/37.916918d7.js"><link rel="prefetch" href="/assets/js/38.a6b4f65c.js"><link rel="prefetch" href="/assets/js/39.27ce49b2.js"><link rel="prefetch" href="/assets/js/4.bbd2e27d.js"><link rel="prefetch" href="/assets/js/40.caae5d27.js"><link rel="prefetch" href="/assets/js/41.b42e90bd.js"><link rel="prefetch" href="/assets/js/42.44935c3b.js"><link rel="prefetch" href="/assets/js/43.8abcc970.js"><link rel="prefetch" href="/assets/js/44.dfabcc7c.js"><link rel="prefetch" href="/assets/js/45.f99ff352.js"><link rel="prefetch" href="/assets/js/46.74394f89.js"><link rel="prefetch" href="/assets/js/47.9db5a76f.js"><link rel="prefetch" href="/assets/js/48.057fbe70.js"><link rel="prefetch" href="/assets/js/49.28462edf.js"><link rel="prefetch" href="/assets/js/5.068cb0b8.js"><link rel="prefetch" href="/assets/js/50.17b998bb.js"><link rel="prefetch" href="/assets/js/51.b035f735.js"><link rel="prefetch" href="/assets/js/52.5639152a.js"><link rel="prefetch" href="/assets/js/53.d220c411.js"><link rel="prefetch" href="/assets/js/54.cdb211a1.js"><link rel="prefetch" href="/assets/js/55.40e47e84.js"><link rel="prefetch" href="/assets/js/56.b4c4ba9f.js"><link rel="prefetch" href="/assets/js/57.5ae4eec2.js"><link rel="prefetch" href="/assets/js/58.520afd3b.js"><link rel="prefetch" href="/assets/js/59.a4bb49f8.js"><link rel="prefetch" href="/assets/js/6.a204ee03.js"><link rel="prefetch" href="/assets/js/60.11f6c123.js"><link rel="prefetch" href="/assets/js/61.cb74221c.js"><link rel="prefetch" href="/assets/js/62.fe7b9298.js"><link rel="prefetch" href="/assets/js/63.352262f8.js"><link rel="prefetch" href="/assets/js/64.f5367c23.js"><link rel="prefetch" href="/assets/js/65.58eb85b4.js"><link rel="prefetch" href="/assets/js/66.147cff9e.js"><link rel="prefetch" href="/assets/js/67.4aec48f6.js"><link rel="prefetch" href="/assets/js/68.b36e10a0.js"><link rel="prefetch" href="/assets/js/69.7cfb3fc9.js"><link rel="prefetch" href="/assets/js/7.b9117345.js"><link rel="prefetch" href="/assets/js/70.0c0884c9.js"><link rel="prefetch" href="/assets/js/71.3f706ea9.js"><link rel="prefetch" href="/assets/js/72.3ef46e4c.js"><link rel="prefetch" href="/assets/js/73.eb0a2480.js"><link rel="prefetch" href="/assets/js/74.6bb0047c.js"><link rel="prefetch" href="/assets/js/75.e6cc918f.js"><link rel="prefetch" href="/assets/js/76.a55eb7d9.js"><link rel="prefetch" href="/assets/js/77.34c7e864.js"><link rel="prefetch" href="/assets/js/78.566b7bb8.js"><link rel="prefetch" href="/assets/js/79.b46ae334.js"><link rel="prefetch" href="/assets/js/80.2672ffbb.js"><link rel="prefetch" href="/assets/js/81.72c5a023.js"><link rel="prefetch" href="/assets/js/82.f7ebc7a6.js"><link rel="prefetch" href="/assets/js/83.fc0fecd9.js"><link rel="prefetch" href="/assets/js/84.99aad2bb.js"><link rel="prefetch" href="/assets/js/85.e803d956.js"><link rel="prefetch" href="/assets/js/86.80cfda31.js"><link rel="prefetch" href="/assets/js/87.5cff48f0.js"><link rel="prefetch" href="/assets/js/88.27bcbba4.js"><link rel="prefetch" href="/assets/js/89.e4bdd190.js"><link rel="prefetch" href="/assets/js/9.b4857c34.js"><link rel="prefetch" href="/assets/js/90.21b09233.js"><link rel="prefetch" href="/assets/js/91.532f4d20.js"><link rel="prefetch" href="/assets/js/92.5ab5e49f.js"><link rel="prefetch" href="/assets/js/93.24bdfdc3.js"><link rel="prefetch" href="/assets/js/94.5cf9ea50.js"><link rel="prefetch" href="/assets/js/95.de8074b5.js"><link rel="prefetch" href="/assets/js/96.28e183b4.js"><link rel="prefetch" href="/assets/js/97.03d4aa50.js"><link rel="prefetch" href="/assets/js/98.5755dfb3.js"><link rel="prefetch" href="/assets/js/99.cab8deac.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a0ec715f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">程序员思语</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/openSource/" class="nav-link">
+  开源
+</a></div><div class="nav-item"><a href="/miniprogram/component/basic/button.html" class="nav-link">
+  Loreal UI组件库
+</a></div><div class="nav-item"><a href="/animation/" class="nav-link">
+  Loreal动画库
+</a></div><div class="nav-item"><a href="/blog/underscore/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">
+  日记
+</a></div> <a href="https://github.com/GitLuoSiyu" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/openSource/" class="nav-link">
+  开源
+</a></div><div class="nav-item"><a href="/miniprogram/component/basic/button.html" class="nav-link">
+  Loreal UI组件库
+</a></div><div class="nav-item"><a href="/animation/" class="nav-link">
+  Loreal动画库
+</a></div><div class="nav-item"><a href="/blog/underscore/" class="nav-link">
+  博客
+</a></div><div class="nav-item"><a href="/interview/" class="nav-link router-link-active">
+  日记
+</a></div> <a href="https://github.com/GitLuoSiyu" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>日记</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/interview/issues_1.html" class="sidebar-link">第 1 题：写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？</a></li><li><a href="/interview/issues_2.html" aria-current="page" class="active sidebar-link">第 1 题：写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/interview/issues_3.html" class="sidebar-link">第 1 题：写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="第-1-题-写-react-vue-项目时为什么要在列表组件中写-key-其作用是什么"><a href="#第-1-题-写-react-vue-项目时为什么要在列表组件中写-key-其作用是什么" class="header-anchor">#</a> <div style="display:inline-block;" data-v-2fb52f6a><img src="" alt data-v-2fb52f6a></div>第 1 题：写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？</h1> <blockquote><p>原题地址：<a href="https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/1" class="action-button">https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/1</a></p></blockquote> <p>基于没有key的情况diff速度会更快。确实，这种观点并没有错。没有绑定key的情况下，并且在遍历模板简单的情况下，会导致虚拟新旧节点对比更快，节点也会复用。而这种复用是就地复用，一种鸭子辩型的复用。以下为简单的例子:</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;div v-for=&quot;i in dataList&quot;&gt;{{ i }}&lt;/div&gt;
+&lt;/div&gt;
+var vm = new Vue({
+  el: '#app',
+  data: {
+    dataList: [1, 2, 3, 4, 5]
+  }
+})
+</code></pre></div><p>以上的例子，v-for的内容会生成以下的dom节点数组，我们给每一个节点标记一个身份id：</p> <div class="language- extra-class"><pre class="language-text"><code>  [
+    '&lt;div&gt;1&lt;/div&gt;', // id： A
+    '&lt;div&gt;2&lt;/div&gt;', // id:  B
+    '&lt;div&gt;3&lt;/div&gt;', // id:  C
+    '&lt;div&gt;4&lt;/div&gt;', // id:  D
+    '&lt;div&gt;5&lt;/div&gt;'  // id:  E
+  ]
+</code></pre></div><p>改变dataList数据，进行数据位置替换，对比改变后的数据</p> <div class="language- extra-class"><pre class="language-text"><code> vm.dataList = [4, 1, 3, 5, 2] // 数据位置替换
+
+ // 没有key的情况， 节点位置不变，但是节点innerText内容更新了
+  [
+    '&lt;div&gt;4&lt;/div&gt;', // id： A
+    '&lt;div&gt;1&lt;/div&gt;', // id:  B
+    '&lt;div&gt;3&lt;/div&gt;', // id:  C
+    '&lt;div&gt;5&lt;/div&gt;', // id:  D
+    '&lt;div&gt;2&lt;/div&gt;'  // id:  E
+  ]
+
+  // 有key的情况，dom节点位置进行了交换，但是内容没有更新
+  // &lt;div v-for=&quot;i in dataList&quot; :key='i'&gt;{{ i }}&lt;/div&gt;
+  [
+    '&lt;div&gt;4&lt;/div&gt;', // id： D
+    '&lt;div&gt;1&lt;/div&gt;', // id:  A
+    '&lt;div&gt;3&lt;/div&gt;', // id:  C
+    '&lt;div&gt;5&lt;/div&gt;', // id:  E
+    '&lt;div&gt;2&lt;/div&gt;'  // id:  B
+  ]
+</code></pre></div><p>增删dataList列表项</p> <div class="language- extra-class"><pre class="language-text"><code>  vm.dataList = [3, 4, 5, 6, 7] // 数据进行增删
+
+  // 1. 没有key的情况， 节点位置不变，内容也更新了
+  [
+    '&lt;div&gt;3&lt;/div&gt;', // id： A
+    '&lt;div&gt;4&lt;/div&gt;', // id:  B
+    '&lt;div&gt;5&lt;/div&gt;', // id:  C
+    '&lt;div&gt;6&lt;/div&gt;', // id:  D
+    '&lt;div&gt;7&lt;/div&gt;'  // id:  E
+  ]
+
+  // 2. 有key的情况， 节点删除了 A, B 节点，新增了 F, G 节点
+  // &lt;div v-for=&quot;i in dataList&quot; :key='i'&gt;{{ i }}&lt;/div&gt;
+  [
+    '&lt;div&gt;3&lt;/div&gt;', // id： C
+    '&lt;div&gt;4&lt;/div&gt;', // id:  D
+    '&lt;div&gt;5&lt;/div&gt;', // id:  E
+    '&lt;div&gt;6&lt;/div&gt;', // id:  F
+    '&lt;div&gt;7&lt;/div&gt;'  // id:  G
+  ]
+</code></pre></div><p>从以上来看，不带有key，并且使用简单的模板，基于这个前提下，可以更有效的复用节点，diff速度来看也是不带key更加快速的，因为带key在增删节点上有耗时。这就是vue文档所说的默认模式。但是这个并不是key作用，而是没有key的情况下可以对节点就地复用，提高性能。</p> <p>这种模式会带来一些隐藏的副作用，比如可能不会产生过渡效果，或者在某些节点有绑定数据（表单）状态，会出现状态错位。VUE文档也说明了 这个默认的模式是高效的，但是只适用于不依赖子组件状态或临时 DOM 状态 (例如：表单输入值) 的列表渲染输出</p> <p>楼下 @yeild 也提到，在不带key的情况下，对于简单列表页渲染来说diff节点更快是没有错误的。但是这并不是key的作用呀。</p> <p>但是key的作用是什么？
+我重新梳理了一下文字，可能这样子会更好理解一些。</p> <p>key是给每一个vnode的唯一id,可以依靠key,更准确, 更快的拿到oldVnode中对应的vnode节点。</p> <h3 id="_1-更准确"><a href="#_1-更准确" class="header-anchor">#</a> 1. 更准确</h3> <p>因为带key就不是就地复用了，在sameNode函数 a.key === b.key对比中可以避免就地复用的情况。所以会更加准确。</p> <h3 id="_2-更快"><a href="#_2-更快" class="header-anchor">#</a> 2. 更快</h3> <p>利用key的唯一性生成map对象来获取对应节点，比遍历方式更快。(这个观点，就是我最初的那个观点。从这个角度看，map会比遍历更快。)</p> <p>原答案 -----------------------
+vue和react都是采用diff算法来对比新旧虚拟节点，从而更新节点。在vue的diff函数中（建议先了解一下diff算法过程）。
+在交叉对比中，当新节点跟旧节点头尾交叉对比没有结果时，会根据新节点的key去对比旧节点数组中的key，从而找到相应旧节点（这里对应的是一个key =&gt; index 的map映射）。如果没找到就认为是一个新增节点。而如果没有key，那么就会采用遍历查找的方式去找到对应的旧节点。一种一个map映射，另一种是遍历查找。相比而言。map映射的速度更快。
+vue部分源码如下：</p> <div class="language- extra-class"><pre class="language-text"><code>// vue项目  src/core/vdom/patch.js  -488行
+// 以下是为了阅读性进行格式化后的代码
+
+// oldCh 是一个旧虚拟节点数组
+if (isUndef(oldKeyToIdx)) {
+  oldKeyToIdx = createKeyToOldIdx(oldCh, oldStartIdx, oldEndIdx)
+}
+if(isDef(newStartVnode.key)) {
+  // map 方式获取
+  idxInOld = oldKeyToIdx[newStartVnode.key]
+} else {
+  // 遍历方式获取
+  idxInOld = findIdxInOld(newStartVnode, oldCh, oldStartIdx, oldEndIdx)
+}
+</code></pre></div><p>创建map函数</p> <div class="language- extra-class"><pre class="language-text"><code>function createKeyToOldIdx (children, beginIdx, endIdx) {
+  let i, key
+  const map = {}
+  for (i = beginIdx; i &lt;= endIdx; ++i) {
+    key = children[i].key
+    if (isDef(key)) map[key] = i
+  }
+  return map
+}
+</code></pre></div><p>遍历寻找</p> <div class="language- extra-class"><pre class="language-text"><code>// sameVnode 是对比新旧节点是否相同的函数
+ function findIdxInOld (node, oldCh, start, end) {
+    for (let i = start; i &lt; end; i++) {
+      const c = oldCh[i]
+      
+      if (isDef(c) &amp;&amp; sameVnode(node, c)) return i
+    }
+  }
+</code></pre></div><div data-v-244f5c7a><ul class="rightMenuWrapper" data-v-244f5c7a></ul></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/interview/issues_1.html" class="prev">
+        第 1 题：写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？
+      </a></span> <span class="next"><a href="/interview/issues_3.html">
+        第 1 题：写 React / Vue 项目时为什么要在列表组件中写 key，其作用是什么？
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.b1dab1dc.js" defer></script><script src="/assets/js/26.e05b3b04.js" defer></script><script src="/assets/js/2.b82dbfb5.js" defer></script><script src="/assets/js/21.c2bfae59.js" defer></script><script src="/assets/js/3.60189cc8.js" defer></script><script src="/assets/js/8.e6a50b92.js" defer></script>
+  </body>
+</html>
